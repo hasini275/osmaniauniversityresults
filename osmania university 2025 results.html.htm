@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>OSMANIA UNIVERSITY RESULTS</title>
+
+<style>
+
+body{
+
+    background:#f6ecd2;
+
+    font-family: Arial, sans-serif;
+
+}
+
+.container{
+
+    width:850px;
+
+    margin:20px auto;
+
+    background:#fdf5dc;
+
+    padding:20px;
+
+    border:1px solid #999;
+
+}
+
+h2,h3{
+
+    text-align:center;
+
+    margin:5px;
+
+}
+
+.notice{
+
+    text-align:center;
+
+    color:red;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+
+}
+
+.input-box{
+
+    text-align:center;
+
+    margin:20px;
+
+}
+
+input{
+
+    padding:5px;
+
+    width:220px;
+
+}
+
+button{
+
+    padding:6px 14px;
+
+    cursor:pointer;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:15px;
+
+}
+
+td,th{
+
+    border:1px solid #333;
+
+    padding:6px;
+
+    font-size:14px;
+
+}
+
+th{
+
+    background:#e6d6a8;
+
+}
+
+.watermark{
+
+    position:relative;
+
+}
+
+.watermark::after{
+
+    content:"OSMANIA UNIVERSITY";
+
+    position:absolute;
+
+    top:40%;
+
+    left:15%;
+
+    font-size:60px;
+
+    color:rgba(0,0,0,0.08);
+
+    transform:rotate(-25deg);
+
+    pointer-events:none;
+
+}
+
+.footer{
+
+    margin-top:20px;
+
+    font-size:12px;
+
+    text-align:center;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* Signature */
+
+.signature{
+
+    margin-top:35px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    font-size:13px;
+
+}
+
+.signature .tick{
+
+    color:#1fa34a;
+
+    font-size:60px;
+
+    font-weight:bold;
+
+    margin-right:15px;
+
+}
+
+.signature .title{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+/* Bottom search */
+
+.bottom-box{
+
+    border:1px solid #333;
+
+    margin-top:25px;
+
+    background:#f7e6b5;
+
+}
+
+.bottom-box .row{
+
+    padding:10px;
+
+    text-align:center;
+
+}
+
+.bottom-box .note{
+
+    color:red;
+
+    font-weight:bold;
+
+    padding-bottom:10px;
+
+}
+
+/* Print */
+
+.print-area{
+
+    text-align:center;
+
+    margin-top:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>OSMANIA INSTITUTE OF HOTEL MANAGEMENT</h2>
+
+    <h3>Bachelors in Culinary Art's & Catering technology</h3>
+
+    <div class="notice">
+
+        RESULT PAGE – AN OFFICIAL UNIVERSITY RECORD
+
+    </div>
+
+    <!-- TOP SEARCH -->
+
+    <div class="input-box">
+
+        Enter Hall Ticket No :
+
+        <input type="text" id="htno">
+
+        <button onclick="showResult()">Submit</button>
+
+    </div>
+
+    <div id="result" class="hidden watermark">
+
+        <table>
+
+            <tr>
+
+                <th>Hall Ticket No</th>
+
+                <td id="r_ht"></td>
+
+                <th>Name</th>
+
+                <td id="r_name"></td>
+
+            </tr>
+
+            <tr>
+
+                <th>Course</th>
+
+                <td colspan="3">Bachelors in Culinary Art's & Catering technology</td>
+
+            </tr>
+
+        </table>
+
+        <table>
+
+            <tr>
+
+                <th>S.No</th>
+
+                <th>Subject</th>
+
+                <th>Theory</th>
+
+                <th>Practical</th>
+
+                <th>Total</th>
+
+                <th>Status</th>
+
+            </tr>
+
+            <tbody id="marks"></tbody>
+
+        </table>
+
+        <!-- SIGNATURE -->
+
+        <div class="signature">
+
+            <div class="tick">✔</div>
+
+            <div>
+
+                <div class="title">Signature</div>
+
+                <div>Digitally displayed</div>
+
+                <div>Name: AUTHORITY</div>
+
+                <div>Date: 2026-01-05 12:22 IST</div>
+
+                <div>Reason: Approved</div>
+
+                <b>COMMISSIONER</b>
+
+            </div>
+
+        </div>
+
+        <!-- PRINT -->
+
+        <div class="print-area">
+
+            This information is provided to the candidate on his/her online request and is only a prototype list.
+
+            <br><br>
+
+            <button onclick="window.print()">Print Page</button>
+
+        </div>
+
+
+            </div>
+
+            <div class="row note">
+
+                Please Enter 12 Digit Hall Ticket Number Ex: 160321732301, 160321732302
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const students = {
+
+    "166325807029":{
+
+        name:"MIRYALA YASHWANTH",
+
+        marks:[
+
+            ["Communicative English",0,43],
+
+            ["Front Office",0,58],
+
+            ["House Keeping",0,62],
+
+            ["Food Production",33,29],
+
+            ["Food & Beverage Service",24,36],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",51,0],
+
+            ["Hotel French",73,0]
+
+        ]
+
+    },
+    "166325807030":{
+
+        name:"ADIL JOHAN E",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,74],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",38,39],
+
+            ["Food & Beverage Service",40,36],
+
+            ["Introduction to Catering & Culinary Arts",67,0],
+
+            ["Hygiene & Safe Food Practice",69,0],
+
+            ["Hotel French",82,0]
+
+        ]
+
+    },
+    "166325807031":{
+
+        name:"T ANIRUDH REDDY",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,51],
+
+            ["Food Production",36,25],
+
+            ["Food & Beverage Service",34,26],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",40,0],
+
+            ["Hotel French",76,0]
+
+        ]
+
+    },
+    "166325807032":{
+
+        name:"MOGILI RANJITH",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",32,35],
+
+            ["Food & Beverage Service",34,26],
+
+            ["Introduction to Catering & Culinary Arts",38,0],
+
+            ["Hygiene & Safe Food Practice",52,0],
+
+            ["Hotel French",73,0]
+
+        ]
+
+    },
+    "166325807033":{
+
+        name:"GANDETI ROHITH",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,54],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",36,25],
+
+            ["Food & Beverage Service",34,31],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",62,0],
+
+            ["Hotel French",74,0]
+
+        ]
+
+    },
+    "166325807034":{
+
+        name:"ARMOOR SHIVA KUMAR",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,54],
+
+            ["House Keeping",0,51],
+
+            ["Food Production",33,25],
+
+            ["Food & Beverage Service",34,26],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",52,0],
+
+            ["Hotel French",76,0]
+
+        ]
+
+    },
+    "166325807035":{
+
+        name:"MOHAMMAD SAIF ALI",
+
+        marks:[
+
+            ["Communicative English",0,52],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,51],
+
+            ["Food Production",33,35],
+
+            ["Food & Beverage Service",34,26],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",40,0],
+
+            ["Hotel French",67,0]
+
+        ]
+
+    },
+    "166325807036":{
+
+        name:"MANNATH PARAMBIL ADITHYAN NAIR",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,74],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",33,28],
+
+            ["Food & Beverage Service",36,26],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",39,0],
+
+            ["Hotel French",74,0]
+
+        ]
+
+    },
+    "166325807037":{
+
+        name:"ADDAGATLA BALA AKHIL",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,51],
+
+            ["Food Production",29,35],
+
+            ["Food & Beverage Service",28,26],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",42,0],
+
+            ["Hotel French",73,0]
+
+        ]
+
+    },
+    "166325807038":{
+
+        name:"GANDLA NIKHITH",
+
+        marks:[
+
+            ["Communicative English",0,52],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,51],
+
+            ["Food Production",28,35],
+
+            ["Food & Beverage Service",24,26],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",52,0],
+
+            ["Hotel French",69,0]
+
+        ]
+
+    },
+    "166325807039":{
+
+        name:"V MURTHEE NANDAN",
+
+        marks:[
+
+            ["Communicative English",0,52],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,59],
+
+            ["Food Production",29,36],
+
+            ["Food & Beverage Service",35,26],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",52,0],
+
+            ["Hotel French",77,0]
+
+        ]
+
+    },
+    "166325807040":{
+
+        name:"PULAGAM CHARAN TEJA REDDY",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,54],
+
+            ["House Keeping",0,41],
+
+            ["Food Production",26,45],
+
+            ["Food & Beverage Service",24,36],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",62,0],
+
+            ["Hotel French",75,0]
+
+        ]
+
+    },
+    "166325807041":{
+
+        name:"UPPUTOORI SRI RAM",
+
+        marks:[
+
+            ["Communicative English",0,52],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",27,53],
+
+            ["Food & Beverage Service",26,36],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",64,0],
+
+            ["Hotel French",69,0]
+
+        ]
+
+    },
+    "166325807042":{
+
+        name:"YARAGANI GOWTHAM",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,54],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",26,35],
+
+            ["Food & Beverage Service",29,26],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",62,0],
+
+            ["Hotel French",79,0]
+
+        ]
+
+    },
+    "166325807043":{
+
+        name:"MADDIKUNTA TOWSHIK REDDY",
+
+        marks:[
+
+            ["Communicative English",0,65],
+
+            ["Front Office",0,57],
+
+            ["House Keeping",0,63],
+
+            ["Food Production",35,29],
+
+            ["Food & Beverage Service",32,28],
+
+            ["Introduction to Catering & Culinary Arts",67,0],
+
+            ["Hygiene & Safe Food Practice",42,0],
+
+            ["Hotel French",77,0]
+
+        ]
+
+    },
+    "166325807044":{
+
+        name:"T PRASHANTH",
+
+        marks:[
+
+            ["Communicative English",0,52],
+
+            ["Front Office",0,48],
+
+            ["House Keeping",0,51],
+
+            ["Food Production",27,28],
+
+            ["Food & Beverage Service",29,36],
+
+            ["Introduction to Catering & Culinary Arts",62,0],
+
+            ["Hygiene & Safe Food Practice",58,0],
+
+            ["Hotel French",75,0]
+
+        ]
+
+    },
+    "166325807045":{
+
+        name:"RAI SAI KUMAR",
+
+        marks:[
+
+            ["Communicative English",0,64],
+
+            ["Front Office",0,55],
+
+            ["House Keeping",0,59],
+
+            ["Food Production",36,28],
+
+            ["Food & Beverage Service",34,26],
+
+            ["Introduction to Catering & Culinary Arts",57,0],
+
+            ["Hygiene & Safe Food Practice",58,0],
+
+            ["Hotel French",79,0]
+
+        ]
+
+    },
+    "166325807046":{
+
+        name:"VUNDAVALLI PRATYUSHA SAI SATYA PRIYA",
+
+        marks:[
+
+            ["Communicative English",0,66],
+
+            ["Front Office",0,74],
+
+            ["House Keeping",0,59],
+
+            ["Food Production",30,14],
+
+            ["Food & Beverage Service",36,38],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",52,0],
+
+            ["Hotel French",73,0]
+
+        ]
+
+    },
+    "166325807047":{
+
+        name:"ZAINAB BEGUM",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,54],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",27,25],
+
+            ["Food & Beverage Service",24,33],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",44,0],
+
+            ["Hotel French",76,0]
+
+        ]
+
+    },
+    "166325807048":{
+
+        name:"TUMU ABHINAY SOURI",
+
+        marks:[
+
+            ["Communicative English",0,0],
+
+            ["Front Office",0,0],
+
+            ["House Keeping",0,0],
+
+            ["Food Production",0,0],
+
+            ["Food & Beverage Service",0,0],
+
+            ["Introduction to Catering & Culinary Arts",0,0],
+
+            ["Hygiene & Safe Food Practice",0,0],
+
+            ["Hotel French",0,0]
+
+        ]
+
+    },
+    "166325807049":{
+
+        name:"VARANASI SHIVANI",
+
+        marks:[
+
+            ["Communicative English",0,0],
+
+            ["Front Office",0,0],
+
+            ["House Keeping",0,0],
+
+            ["Food Production",0,0],
+
+            ["Food & Beverage Service",0,0],
+
+            ["Introduction to Catering & Culinary Arts",0,0],
+
+            ["Hygiene & Safe Food Practice",0,0],
+
+            ["Hotel French",0,0]
+
+        ]
+
+    },
+    "166325807050":{
+
+        name:"PATELGUDEM ARSHITH KUMAR CHARY",
+
+        marks:[
+
+            ["Communicative English",0,42],
+
+            ["Front Office",0,44],
+
+            ["House Keeping",0,39],
+
+            ["Food Production",26,35],
+
+            ["Food & Beverage Service",24,26],
+
+            ["Introduction to Catering & Culinary Arts",38,0],
+
+            ["Hygiene & Safe Food Practice",33,0],
+
+            ["Hotel French",75,0]
+
+        ]
+
+    },
+    "166325807001":{
+
+        name:"SARKAR MANISH PRAKASH",
+
+        marks:[
+
+            ["Communicative English",0,42],
+
+            ["Front Office",0,44],
+
+            ["House Keeping",0,41],
+
+            ["Food Production",36,25],
+
+            ["Food & Beverage Service",34,32],
+
+            ["Introduction to Catering & Culinary Arts",67,0],
+
+            ["Hygiene & Safe Food Practice",64,0],
+
+            ["Hotel French",76,0]
+
+        ]
+
+    },
+    "166325807002":{
+
+        name:"MOHD SAIF",
+
+        marks:[
+
+            ["Communicative English",0,47],
+
+            ["Front Office",0,42],
+
+            ["House Keeping",0,41],
+
+            ["Food Production",28,31],
+
+            ["Food & Beverage Service",23,36],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",53,0],
+
+            ["Hotel French",77,0]
+
+        ]
+
+    },
+    "166325807003":{
+
+        name:"MERUGU PURNA DAS SAI KUMAR",
+
+        marks:[
+
+            ["Communicative English",0,65],
+
+            ["Front Office",0,61],
+
+            ["House Keeping",0,68],
+
+            ["Food Production",37,35],
+
+            ["Food & Beverage Service",32,26],
+
+            ["Introduction to Catering & Culinary Arts",78,0],
+
+            ["Hygiene & Safe Food Practice",59,0],
+
+            ["Hotel French",86,0]
+
+        ]
+
+    },
+    "166325807004":{
+
+        name:"MEKALA HARSHAVARDHAN",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,54],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",39,41],
+
+            ["Food & Beverage Service",34,36],
+
+            ["Introduction to Catering & Culinary Arts",74,0],
+
+            ["Hygiene & Safe Food Practice",62,0],
+
+            ["Hotel French",76,0]
+
+        ]
+
+    },
+    "166325807005":{
+
+        name:"BEERELLI CHARVIK",
+
+        marks:[
+
+            ["Communicative English",0,52],
+
+            ["Front Office",0,54],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",33,25],
+
+            ["Food & Beverage Service",32,36],
+
+            ["Introduction to Catering & Culinary Arts",73,0],
+
+            ["Hygiene & Safe Food Practice",61,0],
+
+            ["Hotel French",85,0]
+
+        ]
+
+    },
+    "166325807006":{
+
+        name:"GOPANAMONI RUSHIKESH",
+
+        marks:[
+
+            ["Communicative English",0,57],
+
+            ["Front Office",0,63],
+
+            ["House Keeping",0,51],
+
+            ["Food Production",26,33],
+
+            ["Food & Beverage Service",34,36],
+
+            ["Introduction to Catering & Culinary Arts",63,0],
+
+            ["Hygiene & Safe Food Practice",60,0],
+
+            ["Hotel French",74,0]
+
+        ]
+
+    },
+    "166325807007":{
+
+        name:"VANJARAPU VAISHNAVI",
+
+        marks:[
+
+            ["Communicative English",0,52],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,54],
+
+            ["Food Production",36,25],
+
+            ["Food & Beverage Service",33,26],
+
+            ["Introduction to Catering & Culinary Arts",62,0],
+
+            ["Hygiene & Safe Food Practice",39,0],
+
+            ["Hotel French",81,0]
+
+        ]
+
+    },
+    "166325807008":{
+
+        name:"RAJ DAWADI",
+
+        marks:[
+
+            ["Communicative English",0,0],
+
+            ["Front Office",0,0],
+
+            ["House Keeping",0,0],
+
+            ["Food Production",0,0],
+
+            ["Food & Beverage Service",0,0],
+
+            ["Introduction to Catering & Culinary Arts",0,0],
+
+            ["Hygiene & Safe Food Practice",0,0],
+
+            ["Hotel French",0,0]
+
+        ]
+
+    },
+    "166325807009":{
+
+        name:"AMARLAPUDI JOHNSON VIKAS",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,49],
+
+            ["House Keeping",0,66],
+
+            ["Food Production",36,22],
+
+            ["Food & Beverage Service",44,36],
+
+            ["Introduction to Catering & Culinary Arts",52,0],
+
+            ["Hygiene & Safe Food Practice",47,0],
+
+            ["Hotel French",73,0]
+
+        ]
+
+    },
+    "166325807010":{
+
+        name:"KULSUM FATIMA",
+
+        marks:[
+
+            ["Communicative English",0,42],
+
+            ["Front Office",0,49],
+
+            ["House Keeping",0,44],
+
+            ["Food Production",26,35],
+
+            ["Food & Beverage Service",34,26],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",62,0],
+
+            ["Hotel French",76,0]
+
+        ]
+
+    },
+    "166325807011":{
+
+        name:"NIDAMANURI VENKATA KOWSHIK",
+
+        marks:[
+
+            ["Communicative English",0,42],
+
+            ["Front Office",0,62],
+
+            ["House Keeping",0,51],
+
+            ["Food Production",42,25],
+
+            ["Food & Beverage Service",34,36],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",48,0],
+
+            ["Hotel French",76,0]
+
+        ]
+
+    },
+    "166325807012":{
+
+        name:"KOTHA SHIVA KUMAR",
+
+        marks:[
+
+            ["Communicative English",0,42],
+
+            ["Front Office",0,47],
+
+            ["House Keeping",0,45],
+
+            ["Food Production",38,25],
+
+            ["Food & Beverage Service",31,26],
+
+            ["Introduction to Catering & Culinary Arts",64,0],
+
+            ["Hygiene & Safe Food Practice",54,0],
+
+            ["Hotel French",72,0]
+
+        ]
+
+    },
+    "166325807013":{
+
+        name:"KALISIPUDI SAI VAISHANTH KUMAR",
+
+        marks:[
+
+            ["Communicative English",0,67],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,56],
+
+            ["Food Production",37,25],
+
+            ["Food & Beverage Service",44,36],
+
+            ["Introduction to Catering & Culinary Arts",73,0],
+
+            ["Hygiene & Safe Food Practice",65,0],
+
+            ["Hotel French",82,0]
+
+        ]
+
+    },
+    "166325807014":{
+
+        name:"MOHD ZAIN UL HUSSAIN",
+
+        marks:[
+
+            ["Communicative English",0,72],
+
+            ["Front Office",0,65],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",36,35],
+
+            ["Food & Beverage Service",24,36],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",55,0],
+
+            ["Hotel French",76,0]
+
+        ]
+
+    },
+    "166325807015":{
+
+        name:"GORANTLA USHASRI",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,58],
+
+            ["Food Production",32,34],
+
+            ["Food & Beverage Service",34,26],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",55,0],
+
+            ["Hotel French",83,0]
+
+        ]
+
+    },
+    "166325807016":{
+
+        name:"LANKI SIVA NAGA VENKATA SATYA SAI",
+
+        marks:[
+
+            ["Communicative English",0,53],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,51],
+
+            ["Food Production",26,32],
+
+            ["Food & Beverage Service",34,26],
+
+            ["Introduction to Catering & Culinary Arts",65,0],
+
+            ["Hygiene & Safe Food Practice",63,0],
+
+            ["Hotel French",74,0]
+
+        ]
+
+    },
+    "166325807017":{
+
+        name:"KANDEPU VIHASITH RAJ",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,54],
+
+            ["House Keeping",0,67],
+
+            ["Food Production",33,35],
+
+            ["Food & Beverage Service",34,31],
+
+            ["Introduction to Catering & Culinary Arts",73,0],
+
+            ["Hygiene & Safe Food Practice",62,0],
+
+            ["Hotel French",89,0]
+
+        ]
+
+    },
+    "166325807018":{
+      
+        name:"KUMMARI SHIVASAIKRISHNA",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,74],
+
+            ["House Keeping",0,53],
+
+            ["Food Production",26,35],
+
+            ["Food & Beverage Service",34,26],
+
+            ["Introduction to Catering & Culinary Arts",41,0],
+
+            ["Hygiene & Safe Food Practice",47,0],
+
+            ["Hotel French",73,0]
+
+        ]
+
+    },
+    "166325807019":{
+
+        name:"BANDARI SMARAN GOUD",
+
+        marks:[
+
+            ["Communicative English",0,0],
+
+            ["Front Office",0,0],
+
+            ["House Keeping",0,0],
+
+            ["Food Production",36,25],
+
+            ["Food & Beverage Service",33,36],
+
+            ["Introduction to Catering & Culinary Arts",45,0],
+
+            ["Hygiene & Safe Food Practice",48,0],
+
+            ["Hotel French",0,0]
+
+        ]
+
+    },
+    "166325807020":{
+
+        name:"POTARABOINA VISHVA TEJA",
+
+        marks:[
+
+            ["Communicative English",0,62],
+
+            ["Front Office",0,54],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",29,35],
+
+            ["Food & Beverage Service",34,26],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",62,0],
+
+            ["Hotel French",74,0]
+
+        ]
+
+    },
+    "166325807021":{
+
+        name:"VOBBILISETTY JAI SARATH",
+
+        marks:[
+
+            ["Communicative English",0,72],
+
+            ["Front Office",0,84],
+
+            ["House Keeping",0,81],
+
+            ["Food Production",38,42],
+
+            ["Food & Beverage Service",44,36],
+
+            ["Introduction to Catering & Culinary Arts",80,0],
+
+            ["Hygiene & Safe Food Practice",56,0],
+
+            ["Hotel French",73,0]
+
+        ]
+
+    },
+    "166325807022":{
+
+        name:"MISRA SHILPA",
+
+        marks:[
+
+            ["Communicative English",0,0],
+
+            ["Front Office",0,0],
+
+            ["House Keeping",0,0],
+
+            ["Food Production",30,0],
+
+            ["Food & Beverage Service",36,0],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",43,0],
+
+            ["Hotel French",76,0]
+
+        ]
+
+    },
+    "166325807023":{
+
+        name:"NEERATI VENKATESH",
+
+        marks:[
+
+            ["Communicative English",0,52],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,54],
+
+            ["Food Production",32,35],
+
+            ["Food & Beverage Service",34,36],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",62,0],
+
+            ["Hotel French",77,0]
+
+        ]
+
+    },
+    "166325807024":{
+
+        name:"MIRZA HUZAIF BAIG",
+
+        marks:[
+
+            ["Communicative English",0,42],
+
+            ["Front Office",0,44],
+
+            ["House Keeping",0,41],
+
+            ["Food Production",36,24],
+
+            ["Food & Beverage Service",33,36],
+
+            ["Introduction to Catering & Culinary Arts",62,0],
+
+            ["Hygiene & Safe Food Practice",43,0],
+
+            ["Hotel French",74,0]
+
+        ]
+
+    },
+    "166325807025":{
+
+        name:"GUJJARLAPUDI MANOJ KUMAR",
+
+        marks:[
+
+            ["Communicative English",0,47],
+
+            ["Front Office",0,53],
+
+            ["House Keeping",0,49],
+
+            ["Food Production",37,24],
+
+            ["Food & Beverage Service",34,36],
+
+            ["Introduction to Catering & Culinary Arts",58,0],
+
+            ["Hygiene & Safe Food Practice",39,0],
+
+            ["Hotel French",74,0]
+
+        ]
+
+    },
+    "166325807026":{
+
+        name:"METLA NAGA SHIVA DEDIPYA",
+
+        marks:[
+
+            ["Communicative English",0,46],
+
+            ["Front Office",00,64],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",36,25],
+
+            ["Food & Beverage Service",44,26],
+
+            ["Introduction to Catering & Culinary Arts",68,0],
+
+            ["Hygiene & Safe Food Practice",62,0],
+
+            ["Hotel French",74,0]
+
+        ]
+
+    },
+    "166325807027":{
+
+        name:"THUMMA SATWIK REDDY",
+
+        marks:[
+
+            ["Communicative English",0,52],
+
+            ["Front Office",0,64],
+
+            ["House Keeping",0,56],
+
+            ["Food Production",36,35],
+
+            ["Food & Beverage Service",24,36],
+
+            ["Introduction to Catering & Culinary Arts",48,0],
+
+            ["Hygiene & Safe Food Practice",41,0],
+
+            ["Hotel French",76,0]
+
+        ]
+
+    },
+    "166325807028":{
+
+        name:"V THANUSH RAJ",
+
+        marks:[
+
+            ["Communicative English",0,64],
+
+            ["Front Office",0,54],
+
+            ["House Keeping",0,61],
+
+            ["Food Production",38,25],
+
+            ["Food & Beverage Service",24,36],
+
+            ["Introduction to Catering & Culinary Arts",77,0],
+
+            ["Hygiene & Safe Food Practice",64,0],
+
+            ["Hotel French",75,0]
+
+        ]
+
+    }
+
+};
+
+function render(ht){
+
+    let res = document.getElementById("result");
+
+    if(!students[ht]){
+
+        res.classList.add("hidden");
+
+        return;
+
+    }
+
+    document.getElementById("r_ht").innerText = ht;
+
+    document.getElementById("r_name").innerText = students[ht].name;
+
+    let rows="";
+
+    students[ht].marks.forEach((m,i)=>{
+
+        let total=m[1]+m[2];
+
+        let status=total>=40?"PASS":"FAIL";
+
+        rows+=`<tr>
+
+        <td>${i+1}</td>
+
+        <td>${m[0]}</td>
+
+        <td>${m[1]}</td>
+
+        <td>${m[2]==0?"--":m[2]}</td>
+
+        <td>${total}</td>
+
+        <td>${status}</td></tr>`;
+
+    });
+
+    document.getElementById("marks").innerHTML=rows;
+
+    res.classList.remove("hidden");
+
+}
+
+function showResult(){
+
+    render(document.getElementById("htno").value.trim());
+
+}
+
+function showResultBottom(){
+
+    render(document.getElementById("htno2").value.trim());
+
+}
+
+</script>
+
+</body>
+
+</html>
